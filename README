@@ -1,0 +1,47 @@
+String Code Samples via C++ implementation
+
+Background:
+    The objective of these programs is to demonstrate a few simple
+    string manipulations via C++ implementation. 
+
+    This directory contains two coding samples:
+    * palinedrome   - Prog tests user specified string for palindrome status
+    * reverseString - Prog reverses user specified string via various methods 
+
+Palindrome Program Description & Usage:
+    This program tests and reports a commandline specified string is
+    or is not a palindrome (a string which reads the same backwards as it
+    does forwards - mamma is a palindrome, momma is NOT a palindrome.
+
+    To test a string for palindrome, on the command line enter:
+        ./palindrome your_string_to_test
+
+    The program will print the result of the test to the display.
+    
+ReverseString Program Description & Usage:
+    This program reverses a commandline specified string via various methods.
+
+    To reverse a string, on the command line enter:
+       ./reverseString your_string_to_reverse
+
+    The program will print the original string, followed by the reverse method
+    used and the resulting string.  The methods of reversal used are listed:
+         * print string from the end using string end iterator
+         * reverse string via standard library algorithm::reverse method
+         * reverse string via standard library vector, rbegin to rend iterators
+         * reverse string via use of standard library stack
+         
+To build:
+    * make               - builds both executables (palindrome, reverseString)
+    * make palindrome    - builds executable palindrome
+    * make reverseString - builds executable reverseString
+
+To execute:
+    * ./palindrome myString_to_test  
+    * ./reverseString myString_to_reverse    
+
+To execute valgrind memory usage check:
+    * make test_palindrome palString=your_string_to_test
+    * make test_reverseString revString=your_string_to_reverse
+    * make tests palString=your_string_test revString=your_string_to_reverse
+
